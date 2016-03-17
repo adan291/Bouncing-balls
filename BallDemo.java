@@ -60,7 +60,7 @@ public class BallDemo
             myCanvas.wait(50);// small delay
             for (int i = 0; i < numberOfBalls; i++) {
                 balls.get(i).move(); 
-                if(balls.get(i).getXPosition() >= 550) {
+                if(balls.get(i).getXPosition() >= 555) {
                     finished = true;
                 }
             }
