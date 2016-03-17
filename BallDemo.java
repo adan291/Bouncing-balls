@@ -29,8 +29,7 @@ public class BallDemo
      * Metodo para crear tantas bolas como se elija de manera random
      */
     public void bounce(int numberOfBalls)
-    {
-        int ground = 400;   // position of the ground line
+    {int ground = 400;   // position of the ground line
 
         myCanvas.setVisible(true);
 
@@ -40,13 +39,19 @@ public class BallDemo
         ArrayList<BouncingBall> balls = new ArrayList<>();
         Random rnd = new Random();
         int radio;
+        int rColor;
+        int gColor;
+        int bColor;
         
         // crate and show the balls
         for (int i = 0; i < numberOfBalls; i++) {
             radio = rnd.nextInt(50);
-                  
+            rColor = rnd.nextInt(255);
+            gColor = rnd.nextInt(255);
+            bColor = rnd.nextInt(255);
+                
             
-            balls.add(new BouncingBall(,radio ground, myCanvas));
+            balls.add(new BouncingBall(radio, new Color(rColor,gColor,bColor), ground, myCanvas));
             balls.get(i).draw();
         }
          // make them bounce
