@@ -34,7 +34,7 @@ public class BallDemo
         // draw the ground
         myCanvas.drawLine(50, ground, 550, ground);
 
-        ArrayList<BouncingBall> balls = new ArrayList<>();
+        ArrayList<BouncingBall> balls = new ArrayList<>(); //Arraylist para guardar las bolas
         Random rnd = new Random();
         int radio;
         int rColor;
@@ -43,7 +43,7 @@ public class BallDemo
         int ejex;
         int ejey;
         // crate and show the balls
-        for (int i = 0; i < numberOfBalls; i++) {
+        for (int i = 0; i < numberOfBalls; i++) { //Creara tantas bolas como numero de bolas dando radio color y posicion aleatorias
             radio = rnd.nextInt(50);
             rColor = rnd.nextInt(255);
             gColor = rnd.nextInt(255);
@@ -56,11 +56,11 @@ public class BallDemo
         }
         // make them bounce
         boolean finished =  false;
-        while(!finished) {
+        while(!finished) { //Si ninguaa se has salido repite todo hasta que suceda
             myCanvas.wait(50);// small delay
-            for (int i = 0; i < numberOfBalls; i++) {
+            for (int i = 0; i < numberOfBalls; i++) { //Por cada bola se movera la posicion
                 balls.get(i).move(); 
-                if(balls.get(i).getXPosition() >= 555) {
+                if(balls.get(i).getXPosition() >= 550) { //Con esto comprobamos cuando alguna de las bolas se ha salido
                     finished = true;
                 }
             }
