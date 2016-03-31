@@ -13,9 +13,9 @@ public class BoxBall
     private int diameter;
     private int xPosition;
     private int yPosition;
-    private final int groundPosition;      // y position of ground
+    private final int groundPosition;      // Posicion en Y
     private Canvas canvas;
-    private int ySpeed = 1;                // initial downward speed
+    private int ySpeed = 1;                // Velocidad inicial
     private int xMove;
     private int yMove;
 
@@ -72,6 +72,8 @@ public class BoxBall
         xPosition += xMove;
 
         // check if it has hit the ground
+        //Con esto digamos que conseguimos que suba o baje la posicion de Y, y ademas  se mueva en
+        // positivo o negativo en las X dando la sensacion de moverse en diagonal
         if(xPosition >= (550 - diameter) || xPosition <= 10){
             xMove = -xMove;
         }
