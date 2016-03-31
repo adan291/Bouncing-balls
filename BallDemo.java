@@ -67,7 +67,20 @@ public class BallDemo
            
         }
     }
-    
+    /**
+     * 
+     */
+    public void boxBounce()
+    {
+        int ground = 450;
+        myCanvas.drawLine(10,10,10,450);    //Borde izquierdo del rectángulo.
+        myCanvas.drawLine(550,10,550,450);  //Borde derecho del rectángulo.
+        myCanvas.drawLine(10,10,550,10);    //Borde superior del rectángulo.
+        myCanvas.drawLine(10,450,550,450);  //Borde inferior del rectángulo.
+        myCanvas.setVisible(true);
+        
+       
+    }
    
     }
     
