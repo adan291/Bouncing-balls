@@ -6,8 +6,6 @@ import java.util.ArrayList;
  * Class BallDemo - a short demonstration showing animation with the 
  * Canvas class. 
  *
- * @author Michael Kölling and David J. Barnes
- * @version 2011.07.31
  */
 
 public class BallDemo   
@@ -29,7 +27,11 @@ public class BallDemo
     public void bounce(int numberOfBalls){
         int ground = 400;   
         myCanvas.setVisible(true);
-
+        
+        
+        
+        
+        
         
         myCanvas.drawLine(50, ground, 550, ground);
 
@@ -65,4 +67,9 @@ public class BallDemo
            
         }
     }
-}
+    
+   
+    }
+    
+    
+    
