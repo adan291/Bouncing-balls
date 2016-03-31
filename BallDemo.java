@@ -91,8 +91,8 @@ public class BallDemo
             int green = rnd.nextInt(256);
             int blue = rnd.nextInt(256);
             
-            int x = rnd.nextInt(500) + 15;
-            int y = rnd.nextInt(400) + 15;
+            int x = rnd.nextInt(450) + 15;
+            int y = rnd.nextInt(350) + 15;
             
             ArrayList<Integer> movimiento = new ArrayList<>();
             movimiento.add(-1);
