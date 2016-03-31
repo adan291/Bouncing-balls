@@ -1,11 +1,21 @@
 import java.awt.*;
 import java.awt.geom.*;
+
 /**
- * Write a description of class BoxBall here.
+ * Class BoxBall - a graphical ball that observes the effect of gravity. The ball
+ * has the ability to move. Details of movement are determined by the ball itself. It
+ * will fall downwards, accelerating with time due to the effect of gravity, and bounce
+ * upward again when hitting the ground.
+ *
+ * This movement can be initiated by repeated calls to the "move" method.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Michael Kölling (mik)
+ * @author David J. Barnes
+ * @author Bruce Quig
+ *
+ * @version 2011.07.31
  */
+
 public class BoxBall
 {
     private Ellipse2D.Double circle;
@@ -13,9 +23,9 @@ public class BoxBall
     private int diameter;
     private int xPosition;
     private int yPosition;
-    private final int groundPosition;      // Posicion en Y
+    private final int groundPosition;      // y position of ground
     private Canvas canvas;
-    private int ySpeed = 1;                // Velocidad inicial
+    private int ySpeed = 1;                // initial downward speed
     private int xMove;
     private int yMove;
 
@@ -72,8 +82,6 @@ public class BoxBall
         xPosition += xMove;
 
         // check if it has hit the ground
-        //Con esto digamos que conseguimos que suba o baje la posicion de Y, y ademas  se mueva en
-        // positivo o negativo en las X dando la sensacion de moverse en diagonal
         if(xPosition >= (550 - diameter) || xPosition <= 10){
             xMove = -xMove;
         }
