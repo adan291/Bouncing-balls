@@ -70,17 +70,44 @@ public class BallDemo
     /**
      * 
      */
-    public void boxBounce()
+    public void boxBounce(int numberOfBall)
     {
         int ground = 450;
-        myCanvas.drawLine(10,10,10,450);    //Borde izquierdo del rectángulo.
-        myCanvas.drawLine(550,10,550,450);  //Borde derecho del rectángulo.
-        myCanvas.drawLine(10,10,550,10);    //Borde superior del rectángulo.
-        myCanvas.drawLine(10,450,550,450);  //Borde inferior del rectángulo.
+        myCanvas.drawLine(50,50,50,450);    //Borde izquierdo del rectángulo.
+        myCanvas.drawLine(550,50,550,450);  //Borde derecho del rectángulo.
+        myCanvas.drawLine(50,50,550,50);    //Borde superior del rectángulo.
+        myCanvas.drawLine(50,450,550,450);  //Borde inferior del rectángulo.
         myCanvas.setVisible(true);
         
+         ArrayList<BoxBall> arrayBalls = new ArrayList<>();
+        
+        for(int i = 0; i < numberOfBall; i++)
+        {
+            Random rnd = new Random();
+            int radio = rnd.nextInt(100);
+            
+            int red = rnd.nextInt(256);
+            int green = rnd.nextInt(256);
+            int blue = rnd.nextInt(256);
+            
+            int x = rnd.nextInt(500) + 15;
+            int y = rnd.nextInt(400) + 15;
+            
+            ArrayList<Integer> movimiento = new ArrayList<>();
+            movimiento.add(-1);
+            movimiento.add(1);
+            
+            int xMove = movimiento.get(rnd.nextInt(2)); 
+            int yMove = movimiento.get(rnd.nextInt(2));
+            
+            BoxBall bola = new BoxBall(x, y, xMove, yMove, radio, new Color(red,green,blue), ground, myCanvas);
+            arrayBalls.add(bola);
+            bola.draw();
+        }
+        boolean finished =  false;
        
     }
+    
    
     }
     
