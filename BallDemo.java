@@ -68,7 +68,8 @@ public class BallDemo
         }
     }
     /**
-     * 
+     * Metodo que crea un rectagunlo y dentro de el apareceran tantas bolas como indique el usuario con caracteristicas random
+     * y rebotaran al tocar una pared y nunca pararan.
      */
      public void boxBounce(int numeroBolas)
     {
@@ -106,7 +107,7 @@ public class BallDemo
         }
         boolean finished =  false;
         while(!finished) {
-            myCanvas.wait(50);           // small delay
+            myCanvas.wait(50);           // tiempo de espera 
             for(BoxBall element : arrayBalls)
             {
                 element.move();

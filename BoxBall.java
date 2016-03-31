@@ -74,6 +74,8 @@ public class BoxBall
      **/
     public void move()
     {
+        //IMPORTANTE QUEDA POR HACER
+        //Hay que añadir mas condiciones para que nunca aparezca una bola tocando el borde del rectangulo
         // remove from canvas at the current position
         erase();
             
